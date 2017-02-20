@@ -1,0 +1,80 @@
+@import "reset";
+@import "variables";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-image: url("../images/IMG_373651%20(1).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+header {
+  background-color: $header-background;
+  img {
+    float: left;
+  }
+  h1 {
+    color: $header-color;
+    line-height: 3.75rem;
+    float: left;
+    font-size: 2rem;
+    font-family: $logo-font;
+  }
+  ul {
+    float: right;;
+    li {
+      font-family: $menu-font;
+      line-height: 3.75rem;
+      float: left;
+      margin-right: 1.56rem;
+      color: $header-color;
+      font-size: 1.5rem;
+      //font-weight: bold;
+    }
+  }
+}
+.container {
+  margin: 0 auto;
+  width: 70%;
+  border: 2px solid red;
+  padding: 1rem;
+}
+
+%placeholder {
+  font-family: $menu-font;
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 1rem 2rem 1rem 2rem;
+  font-family: $menu-font;
+  select, label {
+    margin-top: 2rem;
+  }
+  legend {
+    font-size: 2rem;
+    color: $legend-color;
+  }
+  [name="kindOfCook"] {
+    @extend %placeholder;
+  }
+  [name="meal"] {
+    @extend %placeholder;
+  }
+  option {
+    font-family: $menu-font;
+    font-size: 1.1rem;
+  }
+  .inOrOut {
+    color: $legend-color;
+    font-size: 1.5rem;
+  }
+}

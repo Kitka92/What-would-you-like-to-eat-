@@ -3,11 +3,70 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodersLab</title>
+    <title>What would you like to eat?</title>
     <link rel="stylesheet" href="css/style.css">
-  <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Lobster" rel="stylesheet">
+  <script src="js/script.js"></script>
   </head>
+  
   <body>
-
+                    <!-- HEADER -->
+    <header>
+      
+      <div class="container clearfix">
+        <img src="images/logo2.png">
+        <h1>What would you like to eat?</h1>
+        <nav>
+          <ul>
+            <li>about me</li>
+            <li>projects</li>
+            <li>contact</li>
+          </ul>
+        </nav>
+      </div>
+      
+    </header>
+    
+    
+                    <!-- SECTION -->
+    <section>
+      <div class="container clearfix">
+        
+        <!-- form -->
+        <form>
+          <legend>Select your meal...</legend>
+          
+        <!-- kind of cook -->
+          <select name="kindOfCook">
+            <option value="1">I'm a...</option>
+            <option value="2">good cook</option>
+            <option value="c">bad cook</option>
+          </select>
+          
+        <!-- kind of meal -->
+          <select name="meal">
+            <option value="1">Meal</option>
+            <option value="2">Breakfast</option>
+            <option value="3">Dinner</option>
+            <option value="4">Supper</option>
+          </select>
+          
+          <!-- Cook at home -->
+          <label class="inOrOut">
+            <input type="radio" name="inOrOut">I want to cook myself
+          </label>
+          
+          <!-- Eat out -->
+          <label class="inOrOut">
+            <input type="radio" name="inOrOut">I want to eat out
+          </label>
+          
+        </form>
+        <article>
+        </article>
+      </div>
+    </section>
+    
   </body>
+  
 </html>
