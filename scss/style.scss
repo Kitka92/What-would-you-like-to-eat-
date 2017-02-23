@@ -272,3 +272,14 @@ article {
     }
   }
 }
+
+.bxslider {
+  li {
+  display: flex;
+  font-family: $menu-font;
+  font-size: 3rem;
+    div {
+      padding: 2rem;
+    }
+  }
+}

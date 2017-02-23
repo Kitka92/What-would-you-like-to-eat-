@@ -21,9 +21,9 @@ $(document).ready(function(){
             })
             .done(function( data ) {
              article.html(data);
-          })
+          });
       }
-  })
+  });
     
   
   /* SLIDER */
@@ -60,6 +60,10 @@ $(document).ready(function(){
       console.log(index);
     });
   */
+  
+  $(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
   
 });
   
