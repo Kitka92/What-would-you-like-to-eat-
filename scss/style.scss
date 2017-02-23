@@ -9,25 +9,6 @@ html {
   background-position: bottom;
 }
 
-/*
-html, body {
-  font-size: 16px;
-  height: 100vh;
-  background-image: url('../images/IMG_373651%20(1).jpg');
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100% auto;
-}
-*/
-body {
-  /*
-  background-image: url("../images/IMG_373651%20(1).jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  */
-}
-
 header {
   background-color: $header-background;
   img {
@@ -72,13 +53,14 @@ header {
   padding-top: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
+  height: auto;
 }
 
 .section1 {
   display: flex;
   flex-direction: row;
   margin-top: 0.5rem;
-  //height: 100%;
+  height: 100%;
   //padding-bottom: 5rem;
 }
 
@@ -215,6 +197,7 @@ article {
     p {
       font-size: 1.5rem;
       color: $hover-menu-color;
+      margin-top: 1rem;
     }
     a {
       text-decoration: none;
@@ -226,11 +209,6 @@ article {
       }
     }
   }
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
 }
 
 .hidden {
@@ -282,4 +260,50 @@ article {
       padding: 2rem;
     }
   }
+}
+
+.intro {
+  text-align: center;
+  padding-top: 2rem;
+  &:last-child {
+    padding-top: 1rem;
+  }
+}
+
+.introParagraph {
+  font-size: 2rem;
+  padding: 1rem;
+}
+  
+.sectionContact {
+  margin-top: 1rem;
+}
+
+.contact {
+  h1 {
+    border: 1px solid red;
+    display: inline-block;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    vertical-align: top;
+    font-family: $menu-font;
+    font-size: 2rem;
+    color: $legend-color;
+    &:visited {
+        color: $header-color;
+      }
+    &:hover {
+      color: $hover-menu-color;
+    }
+      a {
+        text-decoration: none;
+        &:visited {
+        color: $legend-color;
+        }
+        &:hover {
+          color: $hover-menu-color;
+        }
+      }
+    }
 }
