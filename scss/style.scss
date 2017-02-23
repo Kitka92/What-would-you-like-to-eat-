@@ -3,14 +3,29 @@
 
 html {
   font-size: 16px;
+  height: 100vh;
+  background-image: url('../images/warzywka.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
+/*
+html, body {
+  font-size: 16px;
+  height: 100vh;
+  background-image: url('../images/IMG_373651%20(1).jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+}
+*/
 body {
+  /*
   background-image: url("../images/IMG_373651%20(1).jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  */
 }
 
 header {
@@ -34,30 +49,42 @@ header {
       margin-right: 1.56rem;
       color: $header-color;
       font-size: 1.5rem;
-      //font-weight: bold;
     }
   }
 }
-.container {
-  margin: 0 auto;
-  width: 70%;
-  border: 2px solid red;
-  padding: 1rem;
+
+header {
+  a {
+    text-decoration: none;
+    color: $header-color;
+    &:hover {
+      color: $hover-menu-color;
+      transition: color 0.5s;
+      cursor: pointer;
+    }
+  }
 }
 
-%placeholder {
-  font-family: $menu-font;
-  font-size: 1.5rem;
-  color: $legend-color;
+.container {
+  margin: 0 auto;
+  width: 80%;
+  border: 2px solid red;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .section1 {
   display: flex;
   flex-direction: row;
+  margin-top: 0.5rem;
+  //height: 100%;
+  //padding-bottom: 5rem;
 }
 
 form {
   display: flex;
+  height: 70vh;
   flex-direction: column;
   flex-basis: 40%;
   margin: 2rem 2rem 1rem 1rem;
@@ -72,11 +99,10 @@ form {
     font-size: 3rem;
     color: $legend-color;
   }
-  [name="kindOfCook"] {
-    @extend %placeholder;
-  }
   [name="meal"] {
-    @extend %placeholder;
+    font-family: $menu-font;
+    font-size: 1.5rem;
+    color: $legend-color;
   }
   option {
     font-family: $menu-font;
@@ -87,7 +113,7 @@ form {
     font-size: 1.5rem;
     margin-top: 3.125rem;
     &:last-of-type {
-      margin-top: 1.25rem;
+      margin-top: 2.5rem;
       margin-bottom: 1.875rem;
     }
   }
@@ -98,7 +124,7 @@ form {
     transform: scale(1.5);
   }
   button {
-    color: #FF7808;
+    color: $recipe-color;
     background-color: $legend-color;
     border-radius: 0.625rem;
     font-family: $menu-font;
@@ -108,19 +134,141 @@ form {
     padding-bottom: 0.3rem;
     padding-left: 3.125rem;
     margin: 0 auto;
+    &:hover {
+      color: $legend-color;
+      background-color: $recipe-color;
+      transition: all 0.5s;
+    }
   }
 }
 
 article {
-  flex-basis: 50%;
-  border: 1px solid green;
+  font-family: $menu-font;
+  flex-basis: 60%;
   margin: 1rem;
   background-color: $form-background;
   border-radius: 1.875rem;
-  div {
+  //height: 70vh;
+  .image {
     text-align: center;
   }
   img {
     border-radius: 1.875rem;
+    margin: 0.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: $recipe-color;
+  }
+  .wraper {
+    display: flex;
+    flex-direction: row;
+    .ingredients {
+      flex-basis: 50%;
+      border-right: 5px solid $recipe-color;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-left: 1rem;
+    }
+    ul {
+      width: 80%;
+      font-size: 1.2rem;
+      list-style: circle;
+      margin-left: 2rem;
+      }
+    .recipe {
+      flex-basis: 50%;
+      p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  img {
+    border-radius: 20px;
+  }
+  article {
+    margin-left: 3rem;
+    flex-basis: 60%;
+    h1 {
+      margin-top: 0.5rem;
+    }
+     p {
+    font-size: 1.5rem;
+    padding: 1rem;
+    
+    }
+  }
+}
+
+.projects {
+  article {
+    padding: 2rem;
+    p {
+      font-size: 1.5rem;
+      color: $hover-menu-color;
+    }
+    a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: black;
+      &:hover {
+        color: $recipe-color;
+        transition: color 0.5s;
+      }
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.section2 {
+  margin-top: 5px;
+  height: 100vh;
+  background-image: url('../images/warzywka.jpg');
+  background-position: bottom;
+  button {
+    margin: 0 auto;
+  }
+}
+
+.slider {
+  width: 640px;
+  height: 428px;
+  overflow: hidden;
+  margin: 0 auto;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    li {
+      float: left;
+      z-index: -1;
+      div {
+        position: relative;
+        bottom: 10rem;
+        background-color: $form-background;
+        height: 7rem;
+        font-family: $menu-font;
+        font-size: 2rem;
+        padding-left: 1rem;
+      }
+    }
   }
 }

@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>What would you like to eat?</title>
-    
+    <!-- bxSlider CSS file -->
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Lobster" rel="stylesheet">
     
   </head>
   
+  
   <body>
-                    <!-- HEADER -->
+    
+    
+    <!-- HEADER -->
     <header>
       <div class="container clearfix">
         <img src="images/logo2.png">
-        <h1><a href="index.html">What would you like to eat?</a></h1>
+        <h1><a href="index.php">What would you like to eat?</a></h1>
         <nav>
           <ul>
             <li><a href="aboutme.html">about me</a></li>
@@ -27,11 +30,9 @@
       </div>
     </header>
     
-    
                     <!-- SECTION -->
     <section>
       <div class="container section1">
-        
         <!-- form -->
         <form>
           <legend>Select your meal...</legend>
@@ -46,49 +47,32 @@
 
           <!-- Cook at home -->
           <label class="inOrOut">
-            <input type="radio" name="inOrOut">I want to cook myself
+            <input type="radio" name="inOrOut" value="1">I want to cook myself
           </label>
 
           <!-- Eat out -->
           <label class="inOrOut">
-            <input type="radio" name="inOrOut">I want to eat out
+            <input type="radio" name="inOrOut" value="2">I want to eat out
           </label>
 
           <button>Eat!</button>
         </form>
         
-        <!-- RECIPES -->
-        <!-- French Toasts -->
         <article>
-          <div class="image"><img src="images/food-1179398_960_720.png"></div>
-          <h1>French Toasts</h1>
-          <div class="wraper">
-            <div class="ingredients">
-              <h2>Ingredients:</h2>
-              <ul>
-                <li>Bread</li>
-                <li>Chease</li>
-                <li>Onion</li>
-                <li>Ham</li>
-                <li>Ketchup or mustard</li>
-              </ul>
-            </div>
-            <div class="recipe">
-              <h2>Recipe:</h2>
-              <p>If you don't know how to make a toast - feel free to contact me :)</p>
-            </div>
+          
         </article>
         
       </div>
     </section>
     
+    <!-- SECTION 2 -->
     <section class="section2 hidden">
       <div class="container clearfix">
         <div class="slider">
-          <ul>
-            <li><img src="images/piecnaszewskiej.jpg"><div>tekst</div></li>
-            <li><img src="images/burger.jpeg"></li>
-            <li><img src="images/8misek.jpeg"></li>
+          <ul class="bxslider">
+            <li><img src="images/piecnaszewskiej.jpg"><div>Piec na szewskiej<br>ul.Szewska 44/46 Wrocław</div></li>
+            <li><img src="images/burger.jpeg"><div>Piec na szewskiej<br>ul.Szewska 44/46 Wrocław</div></li>
+            <li><img src="images/8misek.jpeg"><div>Piec na szewskiej<br>ul.Szewska 44/46 Wrocław</div></li>
           </ul
         </div>
       </div>
@@ -100,8 +84,8 @@
      <script src="https://code.jquery.com/jquery-3.1.1.js"
   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
   crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-app.js"></script> 
-    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-database.js"></script>
+
+      
    
     <script src="js/script.js"></script>
 </html>
