@@ -15,6 +15,7 @@ $(document).ready(function(){
 
       if (selectedRadioVal == 2) {
         section2.removeClass('hidden');
+        $('.bxslider').bxSlider();
       } else {
           $.ajax({
             url: "recipes.php"
@@ -25,9 +26,10 @@ $(document).ready(function(){
       }
   });
   
+  /*
   $(document).ready(function(){
-  $('.bxslider').bxSlider();
-  });
+        $('.bxslider').bxSlider();
+        }); */
   
 });
   
