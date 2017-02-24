@@ -1,13 +1,31 @@
 @import "reset";
 @import "variables";
 
+/******* MAIN PART *******/
+
 body {
   font-size: 16px;
   height: 100vh;
   background-image: url('../images/warzywka.jpg');
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: auto;
 }
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  min-hight: 900px;
+}
+
+.hidden {
+  display: none;
+}
+
+/******* HEADER *******/
 
 header {
   background-color: $header-background;
@@ -46,21 +64,13 @@ header {
   }
 }
 
-.container {
-  margin: 0 auto;
-  width: 80%;
-  padding-top: 1rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  height: auto;
-}
+/******* SECTION 1 *******/
 
 .section1 {
   display: flex;
   flex-direction: row;
   margin-top: 0.5rem;
-  height: 100%;
-  //padding-bottom: 5rem;
+  min-height: 650px;
 }
 
 form {
@@ -123,13 +133,27 @@ form {
   }
 }
 
+.intro {
+  text-align: center;
+  padding-top: 2rem;
+  &:last-child {
+    padding-top: 1rem;
+  }
+}
+
+.introParagraph {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
 article {
+  clear: both;
   font-family: $menu-font;
   flex-basis: 60%;
   margin: 1rem;
   background-color: $form-background;
   border-radius: 1.875rem;
-  //height: 70vh;
+  height: 70%;
   .image {
     text-align: center;
   }
@@ -170,6 +194,8 @@ article {
   }
 }
 
+/******* ABOUT ME *******/
+
 .about {
   display: flex;
   flex-direction: row;
@@ -185,10 +211,17 @@ article {
      p {
     font-size: 1.5rem;
     padding: 1rem;
-    
+       span {
+         color: $header-color;
+       }
     }
   }
 }
+
+.avatar {
+  margin-top: 1rem;
+}
+/******* PROJECTS *******/
 
 .projects {
   article {
@@ -210,9 +243,45 @@ article {
   }
 }
 
-.hidden {
-  display: none;
+/******* CONTACT *******/
+
+.contact {
+  h1 {
+    display: inline-block;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    vertical-align: top;
+    font-family: $menu-font;
+    font-size: 2rem;
+    color: $legend-color;
+    &:visited {
+        color: $header-color;
+      }
+    &:hover {
+      color: $hover-menu-color;
+    }
+      a {
+        text-decoration: none;
+        &:visited {
+        color: $legend-color;
+        }
+        &:hover {
+          color: $hover-menu-color;
+        }
+      }
+    }
 }
+
+.sectionContact {
+  margin-top: 1rem;
+}
+
+.linkedin {
+  margin-left: 10px;
+}
+
+/******* SECTION 2 - SLIDER *******/
 
 .section2 {
   margin-top: 5px;
@@ -259,49 +328,4 @@ article {
       padding: 2rem;
     }
   }
-}
-
-.intro {
-  text-align: center;
-  padding-top: 2rem;
-  &:last-child {
-    padding-top: 1rem;
-  }
-}
-
-.introParagraph {
-  font-size: 2rem;
-  padding: 1rem;
-}
-  
-.sectionContact {
-  margin-top: 1rem;
-}
-
-.contact {
-  h1 {
-    display: inline-block;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    vertical-align: top;
-    font-family: $menu-font;
-    font-size: 2rem;
-    color: $legend-color;
-    &:visited {
-        color: $header-color;
-      }
-    &:hover {
-      color: $hover-menu-color;
-    }
-      a {
-        text-decoration: none;
-        &:visited {
-        color: $legend-color;
-        }
-        &:hover {
-          color: $hover-menu-color;
-        }
-      }
-    }
 }

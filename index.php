@@ -70,7 +70,7 @@
     
                     <!-- SECTION 2 - SLIDER -->
     
-    <section class="section2 hidden">
+    <section href="#slider" class="section2 hidden">
       <div class="container clearfix">
         <ul class="bxslider">
           <li><img src="images/piecnaszewskiej.jpg"><div class="adress">Piec na szewskiej<br>ul. Szewska 44, Wrocław <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.727467776498!2d17.03382791548661!3d51.113488279572266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe9df256eab6d%3A0x943d6bb90e38e936!2sPiec+Na+Szewskiej!5e0!3m2!1spl!2spl!4v1487847716761" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></div></li>
