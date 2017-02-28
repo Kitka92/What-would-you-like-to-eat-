@@ -11,10 +11,10 @@
                  exit (0);
              }
 
-           if ( !mysql_select_db($nazwa_bazy_danych) ) {
-              echo 'Blad otwarcia bazy danych';
-               exit (0);
-           }
+             if ( !mysql_select_db($nazwa_bazy_danych) ) {
+                echo 'Blad otwarcia bazy danych';
+                 exit (0);
+             }
  
 $offset_wynik = mysql_query( " SELECT FLOOR(RAND() * COUNT(*)) AS `offset` FROM `recipes` ");
 $offset_row = mysql_fetch_object( $offset_wynik ); 
@@ -30,4 +30,4 @@ $wynik = mysql_query( " SELECT * FROM `recipes` LIMIT $offset, 1 " );
               exit (0);
            }
 
-           ?>
+?>

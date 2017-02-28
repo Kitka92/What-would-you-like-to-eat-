@@ -1,10 +1,8 @@
 $(document).ready(function(){
   
-  /* EVENTS ON INDEX.html */
+  /* EVENTS ON INDEX.php */
   
   var button = $('button');
-  var radio = $('input'["name=inOrOut"]);
-  var form = $('form');
   var article = $('article');
   var section2 = $('.section2');
   
@@ -12,6 +10,7 @@ $(document).ready(function(){
       e.preventDefault();
       e.stopImmediatePropagation();
       var selectedRadioVal = ($('input[type=radio]:checked').val());
+    
 // option - I want to eat out
       if (selectedRadioVal == 2) {
         section2.removeClass('hidden');
@@ -24,6 +23,7 @@ $(document).ready(function(){
         }
         
         $('.bxslider').bxSlider();
+        
  // option - I want to cook myself       
       } else {
           $.ajax({
@@ -35,9 +35,8 @@ $(document).ready(function(){
       }
   });
   
-  
-  // On About me
-  
+  /* EVENTS ON ABOUT ME, PROJECTS, CONTACT.html */
+    
   var about = $('.about');
   var projects = $('.projects');
   var contact = $('.contact');
@@ -45,9 +44,9 @@ $(document).ready(function(){
   projects.hide();
   contact.hide();
   
-  about.delay(300).show(700);
-  projects.delay(300).fadeIn(700);
-  contact.delay(300).slideDown(700);
+  about.delay(1000).show(700);
+  projects.delay(1000).fadeIn(700);
+  contact.delay(1000).slideDown(700);
   
 });
   
