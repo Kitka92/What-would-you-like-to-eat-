@@ -1,0 +1,98 @@
+/******* HEADER *******/
+
+header {
+  background-color: $header-background;
+  img {
+    float: left;
+  }
+  h1 {
+    color: $header-color;
+    line-height: 3.75rem;
+    float: left;
+    font-size: 2rem;
+    font-family: $logo-font;
+  }
+  nav {
+    float: right;
+    ul {
+      float: right;
+      li {
+        font-family: $menu-font;
+        line-height: 3.75rem;
+        float: left;
+        margin-right: 1.56rem;
+        color: $header-color;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+header {
+  a {
+    text-decoration: none;
+    color: $header-color;
+    &:hover {
+      color: $hover-menu-color;
+      transition: color 0.5s;
+      cursor: pointer;
+    }
+  }
+}
+
+/******* HAMBURGER MENU *******/
+#nav-icon3 {
+  width: 50px;
+  height: 30px;
+  float: right;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  @include transformRotate(0deg)
+  @include transition(.5s)
+}
+
+#nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background-color: $header-color;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  @include transformRotate(0deg)
+  @include transition(.25s)
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 18px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 36px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  @include transformRotate(45deg)
+}
+
+#nav-icon3.open span:nth-child(3) {
+  @include transformRotate(-45deg)
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}

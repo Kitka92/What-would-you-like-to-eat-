@@ -1,0 +1,60 @@
+.intro {
+  text-align: center;
+  padding-top: 2rem;
+  &:last-child {
+    padding-top: 1rem;
+  }
+}
+
+.introParagraph {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+article {
+  clear: both;
+  font-family: $menu-font;
+  flex-basis: 60%;
+  margin: 1rem;
+  background-color: $form-background;
+  border-radius: 1.875rem;
+  height: 70%;
+  .image {
+    text-align: center;
+  }
+  img {
+    border-radius: 1.875rem;
+    margin: 0.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: $recipe-color;
+  }
+  .wraper {
+    display: flex;
+    flex-direction: row;
+    .ingredients {
+      flex-basis: 50%;
+      border-right: 5px solid $recipe-color;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-left: 1rem;
+    }
+    ul {
+      width: 80%;
+      font-size: 1.2rem;
+      list-style: circle;
+      margin-left: 2rem;
+      }
+    .recipe {
+      flex-basis: 50%;
+      p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

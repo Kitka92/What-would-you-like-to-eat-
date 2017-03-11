@@ -20,6 +20,15 @@
       <div class="container clearfix">
         <img src="images/logo2.png">
         <h1><a href="index.php">What would you like to eat?</a></h1>
+        
+        <!-- HAMBURGER MENU ICON -->
+        <div id="nav-icon3">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
         <nav>
           <ul>
             <li><a href="aboutme.html">about me</a></li>
@@ -30,7 +39,7 @@
       </div>
     </header>
     
-                    <!-- SECTION -->
+                    <!-- SECTION 1 form and recipes -->
     <section>
       <div class="container section1">
         
@@ -52,7 +61,7 @@
           </label>
 
           <!-- Eat out -->
-          <label class="inOrOut">
+          <label class="inOrOut tooltip">
             <input type="radio" name="inOrOut" value="2">I want to eat out
           </label>
 

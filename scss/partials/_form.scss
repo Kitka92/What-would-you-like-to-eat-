@@ -1,0 +1,66 @@
+form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  margin: 1rem 2rem 1rem 1rem;
+  padding: 2rem;
+  border-radius: 1.875rem;
+  font-family: $menu-font;
+  background-color: $form-background;
+  select, label {
+    margin-top: 2rem;
+  }
+  legend {
+    font-size: 3rem;
+    color: $legend-color;
+  }
+  [name="meal"] {
+    font-family: $menu-font;
+    font-size: 1.5rem;
+    color: $legend-color;
+  }
+  option {
+    font-family: $menu-font;
+    font-size: 1.1rem;
+  }
+  .inOrOut {
+    color: $legend-color;
+    font-size: 1.5rem;
+    margin-top: 3.125rem;
+    &:last-of-type {
+      margin-top: 2.5rem;
+      margin-bottom: 1.875rem;
+    }
+  }
+  [name="inOrOut"] {
+    position: relative;
+    bottom: 0.625rem;
+    margin-right: 1rem;
+    transform: scale(1.5);
+  }
+  button {
+    color: $recipe-color;
+    background-color: $legend-color;
+    border-radius: 0.625rem;
+    font-family: $menu-font;
+    font-size: 1.5rem;
+    padding-top: 0.3rem;
+    padding-right: 3.125rem;
+    padding-bottom: 0.3rem;
+    padding-left: 3.125rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    &:hover {
+      color: $legend-color;
+      background-color: $recipe-color;
+      transition: all 0.5s;
+    }
+  }
+}
+
+/******* TOOLTIP *******/
+.tooltip {
+  color: darkblue;
+  position: relative;
+  display: inline-block;
+}

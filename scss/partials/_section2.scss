@@ -1,0 +1,48 @@
+/******* SECTION 2 - SLIDER *******/
+
+.section2 {
+  margin-top: 5px;
+  height: 100vh;
+  background-image: url('../images/warzywka.jpg');
+  background-position: bottom;
+  button {
+    margin: 0 auto;
+  }
+}
+
+.slider {
+  width: 640px;
+  height: 428px;
+  overflow: hidden;
+  margin: 0 auto;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    li {
+      float: left;
+      z-index: -1;
+      div {
+        position: relative;
+        bottom: 10rem;
+        background-color: $form-background;
+        height: 7rem;
+        font-family: $menu-font;
+        font-size: 2rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+.bxslider {
+  li {
+  display: flex;
+  font-family: $menu-font;
+  font-size: 3rem;
+    div {
+      padding-left: 1rem;
+    }
+  }
+}

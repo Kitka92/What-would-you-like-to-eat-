@@ -1,32 +1,33 @@
 <?php
  
- $adres_ip_serwera_mysql_z_baza_danych = '127.0.0.1';
- $nazwa_bazy_danych = 'przepisy';
- $login_bazy_danych = 'root';
- $haslo_bazy_danych = '';
+// Theese data are available only for me, so I removed them ;-)
+ $database_ip = '';
+ $database_name = '';
+ $database_login = '';
+ $database_pass = '';
    
-            if ( !mysql_connect($adres_ip_serwera_mysql_z_baza_danych,
-              $login_bazy_danych,$haslo_bazy_danych) ) {
-                echo 'Nie moge polaczyc sie z baza danych';
+            if ( !mysql_connect($database_ip,
+              $database_login,$database_pass) ) {
+                echo "I can't connect to database";
                  exit (0);
              }
 
-             if ( !mysql_select_db($nazwa_bazy_danych) ) {
-                echo 'Blad otwarcia bazy danych';
+             if ( !mysql_select_db($database_name) ) {
+                echo 'Database opening error';
                  exit (0);
              }
  
-$offset_wynik = mysql_query( " SELECT FLOOR(RAND() * COUNT(*)) AS `offset` FROM `recipes` ");
-$offset_row = mysql_fetch_object( $offset_wynik ); 
+$offset_result = mysql_query( " SELECT FLOOR(RAND() * COUNT(*)) AS `offset` FROM `recipes` ");
+$offset_row = mysql_fetch_object( $offset_result ); 
 $offset = $offset_row->offset;
-$wynik = mysql_query( " SELECT * FROM `recipes` LIMIT $offset, 1 " );
+$result = mysql_query( " SELECT * FROM `recipes` LIMIT $offset, 1 " );
           
-           while ( $row = mysql_fetch_row($wynik) ) {
+           while ( $row = mysql_fetch_row($result) ) {
               echo $row[2];
            }
  
            if ( !mysql_close() ) {
-              echo 'Nie moge zakonczyc polaczenia z baza danych';
+              echo "I can't end database connection";
               exit (0);
            }
 

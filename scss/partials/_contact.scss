@@ -1,0 +1,38 @@
+/******* CONTACT *******/
+
+.contact {
+  h1 {
+    display: inline-block;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    vertical-align: top;
+    font-family: $menu-font;
+    font-size: 2rem;
+    color: $legend-color;
+    &:visited {
+        color: $header-color;
+      }
+    &:hover {
+      color: $hover-menu-color;
+    }
+      a {
+        text-decoration: none;
+        color: $legend-color;
+        &:visited {
+        color: $legend-color;
+        }
+        &:hover {
+          color: $hover-menu-color;
+        }
+      }
+    }
+}
+
+.sectionContact {
+  margin-top: 1rem;
+}
+
+.linkedin {
+  margin-left: 10px;
+}

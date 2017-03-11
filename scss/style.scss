@@ -1,5 +1,13 @@
-@import "reset";
-@import "variables";
+@import "modules/reset";
+@import "modules/variables";
+@import "modules/mixins";
+@import "partials/header";
+@import "partials/form";
+@import "partials/article";
+@import "partials/aboutme";
+@import "partials/projects";
+@import "partials/contact";
+@import "partials/section2";
 
 /******* MAIN PART *******/
 
@@ -8,6 +16,7 @@ body {
   height: 100vh;
   background-image: url('../images/warzywka.jpg');
   background-repeat: no-repeat;
+  background-attachment: scroll;
   background-position: bottom;
   background-size: auto;
 }
@@ -25,45 +34,6 @@ body {
   display: none;
 }
 
-/******* HEADER *******/
-
-header {
-  background-color: $header-background;
-  img {
-    float: left;
-  }
-  h1 {
-    color: $header-color;
-    line-height: 3.75rem;
-    float: left;
-    font-size: 2rem;
-    font-family: $logo-font;
-  }
-  ul {
-    float: right;;
-    li {
-      font-family: $menu-font;
-      line-height: 3.75rem;
-      float: left;
-      margin-right: 1.56rem;
-      color: $header-color;
-      font-size: 1.5rem;
-    }
-  }
-}
-
-header {
-  a {
-    text-decoration: none;
-    color: $header-color;
-    &:hover {
-      color: $hover-menu-color;
-      transition: color 0.5s;
-      cursor: pointer;
-    }
-  }
-}
-
 /******* SECTION 1 *******/
 
 .section1 {
@@ -73,259 +43,170 @@ header {
   min-height: 650px;
 }
 
-form {
-  display: flex;
-  height: 70vh;
-  flex-direction: column;
-  flex-basis: 40%;
-  margin: 1rem 2rem 1rem 1rem;
-  padding: 2rem;
-  border-radius: 1.875rem;
-  font-family: $menu-font;
-  background-color: $form-background;
-  select, label {
-    margin-top: 2rem;
-  }
-  legend {
-    font-size: 3rem;
-    color: $legend-color;
-  }
-  [name="meal"] {
-    font-family: $menu-font;
-    font-size: 1.5rem;
-    color: $legend-color;
-  }
-  option {
-    font-family: $menu-font;
-    font-size: 1.1rem;
-  }
-  .inOrOut {
-    color: $legend-color;
-    font-size: 1.5rem;
-    margin-top: 3.125rem;
-    &:last-of-type {
-      margin-top: 2.5rem;
-      margin-bottom: 1.875rem;
-    }
-  }
-  [name="inOrOut"] {
-    position: relative;
-    bottom: 0.625rem;
-    margin-right: 1rem;
-    transform: scale(1.5);
-  }
-  button {
-    color: $recipe-color;
-    background-color: $legend-color;
-    border-radius: 0.625rem;
-    font-family: $menu-font;
-    font-size: 1.5rem;
-    padding-top: 0.3rem;
-    padding-right: 3.125rem;
-    padding-bottom: 0.3rem;
-    padding-left: 3.125rem;
-    margin: 0 auto;
-    &:hover {
-      color: $legend-color;
-      background-color: $recipe-color;
-      transition: all 0.5s;
-    }
-  }
-}
+/******* MEDIA QUERIES *******/
 
-.intro {
-  text-align: center;
-  padding-top: 2rem;
-  &:last-child {
-    padding-top: 1rem;
-  }
-}
-
-.introParagraph {
-  font-size: 2rem;
-  padding: 1rem;
-}
-
-article {
-  clear: both;
-  font-family: $menu-font;
-  flex-basis: 60%;
-  margin: 1rem;
-  background-color: $form-background;
-  border-radius: 1.875rem;
-  height: 70%;
-  .image {
-    text-align: center;
-  }
-  img {
-    border-radius: 1.875rem;
-    margin: 0.5rem;
-  }
-  h1 {
-    font-size: 2rem;
-    margin-left: 1rem;
-    color: $recipe-color;
-  }
-  .wraper {
-    display: flex;
-    flex-direction: row;
-    .ingredients {
-      flex-basis: 50%;
-      border-right: 5px solid $recipe-color;
+@media (max-width: 936px) {
+  body {
+    background-image: url("../images/bamboo.jpg");
+    background-attachment: scroll;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    .section1 {
+      flex-direction: column;
+      justify-content: center;
     }
-    h2 {
-      font-size: 1.5rem;
-      margin-left: 1rem;
+    form {
+      background-color: $header-background;
     }
-    ul {
-      width: 80%;
-      font-size: 1.2rem;
-      list-style: circle;
-      margin-left: 2rem;
-      }
-    .recipe {
-      flex-basis: 50%;
-      p {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        font-size: 1.2rem;
+    article {
+      background-color: $header-background;
+    }
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .about {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        .avatar {
+        }
+        article {
+          flex-basis: 90%;
+          margin-left: 0;
+          margin-right: 0;
+          text-align: justify;
+        }
       }
     }
-  }
-}
-
-/******* ABOUT ME *******/
-
-.about {
-  display: flex;
-  flex-direction: row;
-  img {
-    border-radius: 20px;
   }
   article {
-    margin-left: 3rem;
-    flex-basis: 60%;
     h1 {
-      margin-top: 0.5rem;
-    }
-     p {
-    font-size: 1.5rem;
-    padding: 1rem;
-       span {
-         color: $header-color;
-       }
+      text-align: center;
     }
   }
-}
-
-.avatar {
-  margin-top: 1rem;
-}
-/******* PROJECTS *******/
-
-.projects {
-  article {
-    padding: 2rem;
-    p {
-      font-size: 1.5rem;
-      color: $hover-menu-color;
-      margin-top: 1rem;
-    }
-    a {
-      text-decoration: none;
-      font-size: 1.5rem;
-      color: black;
+  .contact {
+    background-color: $header-background;
+    margin-top: 1rem;
+    border-radius: 1.875rem;
+    h1 {
       &:hover {
-        color: $recipe-color;
+        color: $hover-contact-color;
+        cursor: pointer;
         transition: color 0.5s;
       }
-    }
-  }
-}
-
-/******* CONTACT *******/
-
-.contact {
-  h1 {
-    display: inline-block;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    vertical-align: top;
-    font-family: $menu-font;
-    font-size: 2rem;
-    color: $legend-color;
-    &:visited {
-        color: $header-color;
-      }
-    &:hover {
-      color: $hover-menu-color;
-    }
       a {
-        text-decoration: none;
-        &:visited {
         color: $legend-color;
-        }
         &:hover {
-          color: $hover-menu-color;
+          color: $hover-contact-color;
+          transition: color 0.5s;
         }
       }
     }
-}
-
-.sectionContact {
-  margin-top: 1rem;
-}
-
-.linkedin {
-  margin-left: 10px;
-}
-
-/******* SECTION 2 - SLIDER *******/
-
-.section2 {
-  margin-top: 5px;
-  height: 100vh;
-  background-image: url('../images/warzywka.jpg');
-  background-position: bottom;
-  button {
-    margin: 0 auto;
   }
 }
 
-.slider {
-  width: 640px;
-  height: 428px;
-  overflow: hidden;
-  margin: 0 auto;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    li {
-      float: left;
-      z-index: -1;
-      div {
-        position: relative;
-        bottom: 10rem;
-        background-color: $form-background;
-        height: 7rem;
-        font-family: $menu-font;
-        font-size: 2rem;
-        padding-left: 1rem;
+@media (max-width: 630px) {
+  header {
+    text-align: center;
+    img {
+      display: none;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 auto;
+      float: none;
+      padding-bottom: 1rem;
+      line-height: 2rem;
+    }
+    #nav-icon3 {
+      float: none;
+      clear: both;
+      top: -1rem;
+      margin: 0 auto;
+      span {
+        height: 5px;
+        width: 80%;
+        position: absolute;
+        
+      }
+    }
+    nav {
+      float: none;
+      clear: both;
+      margin: 0 auto;
+      text-align: center;
+      ul {
+        float: none;
+        clear: both;
+        text-align: center;
+        li {
+          text-align: center;
+          float: none;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .contact {
+    h1 {
+      font-size: 1.5rem;
+      padding-left: 0;
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+    img {
+      display: block;
+    }
+  }
+  form {
+    button {
+      padding-bottom: 0.3rem;
+    }
+  }
+  article {
+    div {
+      img {
+        margin: 0;
       }
     }
   }
 }
 
-.bxslider {
-  li {
-  display: flex;
-  font-family: $menu-font;
-  font-size: 3rem;
-    div {
-      padding: 2rem;
+@media(max-width: 437px) {
+  .section1 {
+    margin: 0;
+    align-items: center;
+    form {
+      padding: 1rem;
+      margin: 1rem;
+      width: 100%;
+    legend {
+      font-size: 2rem;
+    }
+    [name="meal"] {
+      font-size: 1rem;
+    }
+    label {
+      font-size: 1rem;
+    }
+  }
+    article {
+      width: 100%;
+      h1 {
+        margin-left: 0;
+      }
+      p.introParagraph {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .contact {
+    h1 {
+      font-size: 1rem;
     }
   }
 }
