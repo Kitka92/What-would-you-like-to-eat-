@@ -8,4 +8,4 @@ There is a form which you can fill and see a few options.
 
 Bon appétit :) :spaghetti:
 
-[What would you like to eat?](www.kitka.tarchalski.pl)
+[What would you like to eat?](http://kitka.tarchalski.pl)
